@@ -31,26 +31,22 @@ const Repo = ({ data, clickHandler }) => {
       alignItems: 'center',
       width: '100%',
     },
-    span: {
-      fontWeight: 700,
-      fontStyle: 'italic',
-    },
   };
 
   return (
     <Box id={id} sx={style.container} onClick={() => clickHandler(id)}>
       <Typography variant="h4">{name}</Typography>
       <Typography variant="p" sx={style.description}>
-        <Typography variant="span" sx={style.span}>
-          Message:
-        </Typography>{' '}
         {description ? description : 'No description'}
       </Typography>
 
       <Box sx={style.textContainer}>
         <Typography variant="p">
           Language:{' '}
-          <Typography variant="span" sx={style.span}>
+          <Typography
+            variant="span"
+            sx={{ fontWeight: 700, fontStyle: 'italic' }}
+          >
             {language}
           </Typography>
         </Typography>

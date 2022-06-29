@@ -61,6 +61,7 @@ const CommitModal = ({ toggle, data, clickHandler }) => {
           {new Date(author.date).toDateString()}
         </Typography>
         <Typography variant="q" sx={{ fontStyle: 'italic' }}>
+          <Typography sx={{ fontWeight: 700 }}>Message: </Typography>
           {message}
         </Typography>
         <Button
