@@ -12,19 +12,15 @@ const RepoList = ({ data, lang, clickHandler }) => {
         <Repo key={repo.id} data={repo} clickHandler={clickHandler} />
       ));
 
-  return (
-    <Box
-      sx={{
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        gap: 2,
-        paddingBottom: '30px',
-      }}
-    >
-      {repoList}
-    </Box>
-  );
+  const style = {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    gap: 2,
+    paddingBottom: '30px',
+  };
+
+  return <Box sx={style}>{repoList}</Box>;
 };
 
 export default RepoList;

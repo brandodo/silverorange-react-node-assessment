@@ -43,6 +43,7 @@ const CommitModal = ({ toggle, data, clickHandler }) => {
   return (
     <Modal open={toggle}>
       <Box sx={style.modal}>
+        {/* Display readme markdown if it exist */}
         {read_me ? (
           <>
             <Typography sx={style.text}>README.MD:</Typography>

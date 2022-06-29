@@ -7,7 +7,7 @@ import Error from './components/Error/Error';
 import './App.css';
 import axios from 'axios';
 
-const API_URL = process.env.REACT_APP_API_URL;
+const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:4000/repos';
 
 export function App() {
   const [repos, setRepos] = useState([]);
@@ -16,6 +16,7 @@ export function App() {
   const [show, setShow] = useState(false);
   const [error, setError] = useState(false);
 
+  // Retrieve API data and store in state once component has mounted
   useEffect(() => {
     fetchData();
   }, []);

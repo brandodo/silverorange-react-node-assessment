@@ -16,16 +16,17 @@ const FilterBar = ({ data, clickHandler }) => {
       clickHandler={clickHandler}
     />
   ));
+
+  const style = {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    gap: 5,
+    m: '25px',
+  };
+
   return (
-    <Box
-      sx={{
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        gap: 5,
-        m: '25px',
-      }}
-    >
+    <Box sx={style}>
       <Typography variant="h6">Filter by language:</Typography>
       {buttons}
       <Button variant="outlined" onClick={() => clickHandler('')}>
